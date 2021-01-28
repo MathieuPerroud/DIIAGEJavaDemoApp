@@ -24,6 +24,7 @@ public class QuoteEditViewModel extends ViewModel {
     private final MutableLiveData<Event<Boolean>> dismiss = new MutableLiveData<>();
 
 
+
     @Inject
     @ViewModelInject
     public QuoteEditViewModel(ExecutorService executorService, QuoteRepository quoteRepository){

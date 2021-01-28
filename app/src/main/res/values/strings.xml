@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">demoapp3</string>
+    <string name="app_name">PERROUD Mathieu</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -11,4 +11,8 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="quote_edit">Création / Modification</string>
+    <string name="menu_vehicle">Vehicle</string>
+    <string name="erreur">erreur de récupération de véhicule</string>
+    <string name="search_vehicle">Rechercher Véhicule</string>
+    <string name="hint_id">n° véhicule</string>
 </resources>

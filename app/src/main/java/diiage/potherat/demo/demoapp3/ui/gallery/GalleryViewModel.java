@@ -39,7 +39,8 @@ public class GalleryViewModel extends ViewModel {
         Pager<Integer,Quote> pager = new Pager<>(new PagingConfig(20,20,true), quoteRepository::getAll);
         quotes = PagingLiveData.cachedIn(PagingLiveData.getLiveData(pager), viewModelScope);
 
-        poeples = Transformations.map(swRepository.getPeoples(),input -> {
+        poeples =
+                Transformations.map(swRepository.getPeoples(),input -> {
                     if(input instanceof ApiSuccessResponse) {
                         return ((ApiSuccessResponse<SWModelList<People>>) input).getBody().results;
                     } else if (input instanceof ApiErrorResponse){

@@ -14,6 +14,7 @@ import diiage.potherat.demo.demoapp3.model.Quote;
 
 @Dao
 public interface QuoteDao extends QuoteRepository {
+
     @Query("SELECT * FROM Quote")
     PagingSource<Integer, Quote> getAll();
     @Query("SELECT * FROM Quote WHERE id = :id")
@@ -24,4 +25,13 @@ public interface QuoteDao extends QuoteRepository {
     void update(Quote quote);
     @Delete
     void delete(Quote quote);
+
+    @Query("SELECT COUNT(*) FROM Quote")
+    LiveData<Integer> getTotalQuotes();
+
+    @Query("SELECT COUNT(*) FROM (SELECT DISTINCT source FROM Quote) as source_table")
+    LiveData<Integer> getTotalAuthors();
+
+    @Query("SELECT * FROM Quote ORDER BY id DESC LIMIT 1")
+    LiveData<Quote> getLastQuote();
 }
